@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout Product</title>
+
+<style>
+.product-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid cyan;
+}
+
+.price {
+    color: cyan;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    background: #111;
+    color: white;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.qris {
+    margin-top: 20px;
+}
+
+.qris img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <img src="snaptik_7423267946258058501_9.jpg" class="product-img">
+
+        <h2>Module Ultra Vvip</h2>
+        <p>⚡ FITUR UTAMA
+🎮 Boost performa gaming (FF, ML, PUBG, dll)
+⚡ UI lebih smooth & responsif (anti patah-patah)
+🧠 Optimasi RAM & background app (lebih ringan)
+🚀 Mode performa tinggi (ROOT version)
+❄️ Thermal balance (mengurangi overheat berlebih)
+📱 Support hampir semua device Android
+🔒 Aman digunakan (No Root & Root tersedia)
+💎 KEUNGGULAN
+✔ Tanpa tweak palsu (semua fungsi real)
+✔ Stabil untuk harian & gaming
+✔ Ringan, tidak membebani sistem
+✔ Bisa dipakai di HP kentang sampai flagship
+✔ Tidak merusak sistem (jika digunakan sesuai mode)
+🔥 MODE TERSEDIA
+⚙️ NO ROOT MODE
+– Optimasi ringan & aman
+– Fokus ke UI, RAM, dan stabilitas
+⚡ ROOT MODE (FULL POWER)
+– Unlock performa CPU & GPU
+– Cocok untuk gaming berat & max FPS
+⚠️ CATATAN PENTING
+Versi ROOT membutuhkan akses root (Magisk / KernelSU)
+Performa tergantung spesifikasi device
+Mode EXTREME bisa meningkatkan panas & konsumsi baterai</p>
+
+        <div class="price">Rp 30.000</div>
+
+        <!-- INPUT NAMA -->
+        <input type="text" id="nama" placeholder="Masukkan nama kamu">
+
+        <!-- TOMBOL WA -->
+        <button class="btn" onclick="buyWA()">💬 Kirim Bukti via WhatsApp</button>
+
+        <div class="qris">
+            <p>PEMBAYARAN VIA :</p>
+            <img src="qris.jpg" alt="QRIS">
+            <p>DANA: 081529410633</p>
+            <p>GOPAY: 081529410633</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function buyWA(){
+    let nama = document.getElementById("nama").value;
+
+    if(nama === ""){
+        alert("Isi nama dulu bro!");
+        return;
+    }
+
+    let pesan = 
+    "Halo, saya " + nama + "%0A" +
+    "Saya sudah bayar Module Smooth Aim%0A" +
+    "Harga: Rp 30.000%0A" +
+    "Mohon cek & kirim filenya 🙏";
+
+    window.location.href =
+    "https://wa.me/6281252647920?text=" + pesan;
+}
+</script>
+
+</body>
+</html>

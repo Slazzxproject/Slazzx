@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slazzx Project</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ANIMATED BACKGROUND */
+.bg {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, cyan 0%, transparent 60%);
+    animation: move 10s linear infinite;
+    opacity: 0.08;
+    z-index: -1;
+}
+
+@keyframes move {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(-20%, -20%);}
+    100% {transform: translate(0,0);}
+}
+
+/* PROFILE */
+.profile {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1s ease;
+}
+
+.profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    box-shadow: 0 0 20px cyan;
+}
+
+h1 {
+    font-family: Orbitron;
+    margin-top: 10px;
+}
+
+p {
+    opacity: 0.7;
+}
+
+/* BUTTON STYLE */
+.btn {
+    display: block;
+    margin: 12px auto;
+    width: 85%;
+    padding: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.4);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+    background: cyan;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* CARD STORE */
+.card {
+    width: 85%;
+    margin: 15px auto;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: cyan;
+}
+
+.price {
+    color: cyan;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.buy {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: cyan;
+    color: black;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.buy:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* SECTION */
+.section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- PROFILE -->
+<div class="profile">
+    <img src="anime.jpg" alt="profile">
+    <h1>Slazzx Project</h1>
+    <p>Digital Store • Boost System • Mod Tools</p>
+</div>
+
+<!-- MENU -->
+<div class="section">
+
+    <a class="btn" href="https://wa.me/6281252647920">💬 WhatsApp Admin</a>
+
+    <a class="btn" href="https://whatsapp.com/channel/0029Vb6PXGOHgZWbNvIc7u3s">
+        📢 Saluran WhatsApp Slazzx
+    </a>
+
+    <a class="btn" href="https://tiktok.com/@slazzxarch.id">
+        🎮 TikTok Slazzx
+    </a>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>⚡ about</h2>
+    <p style="opacity:0.7; padding:10px;">
+        Website ini menyediakan module, boost system, dan tools untuk meningkatkan performa device & game.
+    </p>
+</div>
+
+<!-- STORE -->
+<div class="section" id="store">
+    <h2>🛒 Store</h2>
+
+    <div class="card">
+        <h3>Module smooth aim</h3>
+        <p>pelicin layar + anti patah patah</p>
+        <div class="price">Rp 20.000</div>
+          <a href="product.html" class="btn">Beli Sekarang</a>
+</a>
+</div>
+
+    <div class="card">
+        <h3>Module Ultra Vvip</h3>
+        <p>Saat main game gak patah patah dan ngeleg</p>
+        <div class="price">Rp 30.000</div>
+        <a href="product1.html" class="btn">Beli Sekarang</a>
+</a>
+</div>
+
+</div>
+
+<script>
+function buy(item){
+    window.location.href =
+    "https://wa.me/628123456789?text=Saya%20mau%20beli%20Module%20" + item;
+}
+</script>
+
+</body>
+</html>
